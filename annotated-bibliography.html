@@ -2,55 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Annotated Bibliography | Redline Capstone</title>
-  <meta name="description" content="Kazim Syed's CSS 496 capstone portfolio for Redline, a web app that shows used car buyers the true 5-year cost of owning a car.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Annotated Bibliography · Redline Capstone · Kazim Syed</title>
+  <meta name="description" content="Annotated Bibliography: The resources behind Redline, grouped by theme, with one annotation per theme.">
+  <meta name="theme-color" content="#f5f4f0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23141414'/%3E%3Crect x='6' y='20' width='20' height='3' fill='%23c8102e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to main content</a>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">RED<span>LINE</span> &middot; Capstone</a>
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Redline Capstone, home">
+        <span class="brand-mark">Red<span>line</span></span>
+        <span class="label">CSS 496 Capstone</span>
+      </a>
       <nav class="nav" aria-label="Portfolio pages">
         <ul>
-        <li><a href="index.html">Capstone</a></li>
-        <li><a href="users-perspective.html">User's Perspective</a></li>
-        <li><a href="developers-perspective.html">Developer's Perspective</a></li>
-        <li><a href="my-perspective.html">My Perspective</a></li>
-        <li><a href="annotated-bibliography.html" aria-current="page">Annotated Bibliography</a></li>
+          <li><a href="index.html">Capstone</a></li>
+          <li><a href="users-perspective.html">User's Perspective</a></li>
+          <li><a href="developers-perspective.html">Developer's Perspective</a></li>
+          <li><a href="my-perspective.html">My Perspective</a></li>
+          <li><a href="annotated-bibliography.html" aria-current="page">Annotated Bibliography</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <h1 class="page-title">Annotated Bibliography</h1>
-    <p class="page-sub">Resources grouped by theme, with one annotation per theme. APA format.</p>
-    <div class="toc">
-      <strong>On this page</strong>
-      <ol>
-        <li><a href="#cost-data">Cost &amp; Ownership Data</a></li>
-        <li><a href="#government-apis">Government Vehicle APIs</a></li>
-        <li><a href="#web-development">Web Development with Next.js</a></li>
-      </ol>
+    <header class="page-head wrap">
+      <p class="label"><b>05 / 05</b> <span>Annotated Bibliography</span></p>
+      <h1>Annotated Bibliography</h1>
+      <p class="subtitle">The resources behind Redline, grouped by theme, with one annotation per theme.</p>
+    </header>
+
+    <div class="doc wrap">
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+            <li><a href="#cost-and-ownership-data">Cost and Ownership Data</a></li>
+            <li><a href="#government-vehicle-data">Government Vehicle Data</a></li>
+            <li><a href="#web-development">Web Development</a></li>
+        </ol>
+      </nav>
+
+      <div class="sections">
+        <section class="sec" id="cost-and-ownership-data" aria-labelledby="cost-and-ownership-data-h">
+          <h2 id="cost-and-ownership-data-h">Cost and Ownership Data</h2>
+          <p class="label tag">Annotation</p>
+          <p class="placeholder">One annotation for this theme: How these sources informed the 5-year cost model.</p>
+          <ul class="sources" aria-label="Sources for Cost and Ownership Data, APA, alphabetical">
+            <li class="placeholder">Sources to come, listed alphabetically by author in APA 7 format.</li>
+          </ul>
+        </section>
+        <section class="sec" id="government-vehicle-data" aria-labelledby="government-vehicle-data-h">
+          <h2 id="government-vehicle-data-h">Government Vehicle Data</h2>
+          <p class="label tag">Annotation</p>
+          <p class="placeholder">One annotation for this theme: How these public datasets informed vehicle, fuel economy, and Washington tax and registration figures.</p>
+          <ul class="sources" aria-label="Sources for Government Vehicle Data, APA, alphabetical">
+            <li class="placeholder">Sources to come, listed alphabetically by author in APA 7 format.</li>
+          </ul>
+        </section>
+        <section class="sec" id="web-development" aria-labelledby="web-development-h">
+          <h2 id="web-development-h">Web Development</h2>
+          <p class="label tag">Annotation</p>
+          <p class="placeholder">One annotation for this theme: How these resources informed building Redline with Next.js, Supabase and Vercel.</p>
+          <ul class="sources" aria-label="Sources for Web Development, APA, alphabetical">
+            <li class="placeholder">Sources to come, listed alphabetically by author in APA 7 format.</li>
+          </ul>
+        </section>
+      </div>
     </div>
-    <p class="placeholder">Entries coming soon. Theme headings will be parallel and alphabetical, with sources sorted alphabetically under each.</p>
-    <h2 id="cost-data">Cost &amp; Ownership Data</h2>
-    <p class="placeholder">Placeholder annotation and sources.</p>
 
-    <h2 id="government-apis">Government Vehicle APIs</h2>
-    <p class="placeholder">Placeholder annotation and sources.</p>
-
-    <h2 id="web-development">Web Development with Next.js</h2>
-    <p class="placeholder">Placeholder annotation and sources.</p>
-    <nav class="pager" aria-label="Previous and next page"><a href="my-perspective.html">&larr; My Perspective</a><span></span></nav>
+    <nav class="wrap" aria-label="Previous and next page">
+      <div class="pager">
+        <a class="prev" href="my-perspective.html"><span class="label">&larr; Previous</span><strong>My Perspective</strong></a>
+      </div>
+    </nav>
   </main>
 
-  <footer>
-    <div class="inner">
-      <span>Kazim Syed &middot; CSS 496 Applied Computing Capstone &middot; University of Washington &middot; Autumn 2026</span>
-      <a href="https://kazi7107.github.io/">Personal site</a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="footer-mark">Red<span>line</span></span>
+      <p class="label">Kazim Syed &middot; CSS 496 Capstone &middot; University of Washington &middot; Autumn 2026</p>
+      <p class="label"><a href="#main">Back to top &uarr;</a></p>
     </div>
   </footer>
 </body>
