@@ -1,0 +1,144 @@
+:root {
+  --ink: #111418;
+  --muted: #4a5260;
+  --paper: #ffffff;
+  --soft: #f4f5f7;
+  --line: #d9dce1;
+  --red: #b3121f;
+  --red-dark: #8a0d17;
+  --max: 960px;
+  --wide: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+a { color: var(--red); }
+a:hover { color: var(--red-dark); }
+
+.skip {
+  position: absolute; left: -999px; top: 0;
+  background: var(--ink); color: #fff; padding: .5rem 1rem; z-index: 10;
+}
+.skip:focus { left: 0; }
+
+/* ---------- Header + nav ---------- */
+.site-header {
+  background: var(--ink);
+  color: #fff;
+  border-bottom: 4px solid var(--red);
+  position: sticky; top: 0; z-index: 5;
+}
+.header-inner {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: .75rem 1.25rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.5rem;
+}
+.brand {
+  color: #fff; text-decoration: none; font-weight: 800;
+  letter-spacing: .02em; font-size: 1.15rem;
+}
+.brand span { color: #ff4d5a; }
+.brand:hover { color: #fff; }
+
+.nav { margin-left: auto; }
+.nav ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: .25rem;
+}
+.nav a {
+  display: block; padding: .4rem .7rem; border-radius: 4px;
+  color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem;
+}
+.nav a:hover, .nav a:focus-visible { background: #2a2f37; color: #fff; }
+.nav a[aria-current="page"] { background: var(--red); color: #fff; }
+
+/* ---------- Page body ---------- */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+.page-title { font-size: 2.2rem; line-height: 1.2; margin: 0 0 .25rem; }
+.page-sub { color: var(--muted); margin: 0 0 2rem; font-size: 1.1rem; }
+
+h2 { font-size: 1.5rem; margin: 2.5rem 0 .5rem; padding-bottom: .3rem; border-bottom: 2px solid var(--line); }
+h3 { font-size: 1.15rem; margin: 1.5rem 0 .25rem; }
+
+.placeholder {
+  background: var(--soft);
+  border-left: 4px solid var(--line);
+  padding: .75rem 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* On-page section menu */
+.toc {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+.toc strong { display: block; margin-bottom: .25rem; }
+.toc ol { margin: 0; padding-left: 1.25rem; }
+
+/* ---------- Landing ---------- */
+.hero {
+  display: grid; gap: 2rem; align-items: center;
+  grid-template-columns: 1.3fr 1fr;
+  margin-bottom: 2.5rem;
+}
+.hero .kicker { color: var(--red); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; margin: 0; }
+.hero h1 { font-size: 2.8rem; line-height: 1.1; margin: .25rem 0 .75rem; }
+.hero p { margin: 0 0 1rem; }
+.hero-art {
+  background: var(--ink); color: #fff; border-radius: 8px; padding: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.hero-art .big { font-size: 2.4rem; font-weight: 800; color: #ff4d5a; }
+.hero-art .row { display: flex; justify-content: space-between; border-bottom: 1px solid #2f343c; padding: .35rem 0; font-size: .95rem; }
+
+.cards {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+  display: block; text-decoration: none; color: var(--ink);
+  border: 2px solid var(--line); border-radius: 8px; padding: 1.1rem 1.2rem;
+  transition: border-color .15s, transform .15s;
+}
+.card:hover, .card:focus-visible { border-color: var(--red); color: var(--ink); transform: translateY(-2px); }
+.card h2 { font-size: 1.15rem; margin: 0 0 .35rem; border: 0; padding: 0; color: var(--red); }
+.card p { margin: 0; font-size: .95rem; color: var(--muted); }
+
+.meta { margin-top: 2.5rem; color: var(--muted); font-size: .95rem; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .9rem;
+}
+footer .inner { max-width: var(--max); margin: 0 auto; padding: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; }
+.pager a { font-weight: 600; text-decoration: none; }
+
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .nav { margin-left: 0; width: 100%; }
+  .site-header { position: static; }
+}
